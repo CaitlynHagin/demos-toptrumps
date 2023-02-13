@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+
+
+<body>
+   <div class="quiz-container">
+        <form action="" id="quiz-form">
+            <label for="quizQuestion">What city in Europe has more trees than people?</label>
+            <input type="text" id="questionAnswer">
+            <input type="submit" id="submit">
+        </form>
+        <div id="resultPara"></div>
+    </div>
+
+    <script>
+    const submitBtn = document.querySelector("#submit")
+        console.log(submit);
+        
+        const resultPara = document.querySelector("#resultPara")
+        
+        submitBtn.addEventListener("click", function(event){
+            event.preventDefault(event)
+            let questionAnswer = document.querySelector("#questionAnswer").value.toUpperCase()
+            console.log(questionAnswer)
+        
+            
+            if(questionAnswer === "SHEFFIELD"){
+                console.log("correct")
+                resultPara.innerHTML = "Correct"
+                } 
+        
+        })
+        </script>
+
+        
+</body>
+</html>
+
+
+
+
+
