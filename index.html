@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/css/style.css">
+</head>
+<body class="blue">
+    <div id="demo"></div>
+
+    <button id="toggle">Toggle background</button>
+
+    <hr>
+
+    <form id="numberForm" >
+        <label for="newNumber">Add a number</label>
+        <input type="text" id="newNumber" name="newNumber" pattern="[0-9]+" >
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+
+        const toggleBtn = document.getElementById("toggle");
+        const body = document.querySelector("body");
+        
+        toggleBtn.addEventListener('click', function(){
+            // check if the body has the class 'blue'
+            // if has 'blue' class, remove the 'blue' class and add 'red' class
+            // if it has the 'red' class remove the red class and add blue class.
+            if ( body.classList.contains("blue") ) {
+                body.classList.remove("blue");
+                body.classList.add("red");
+            } else if (body.classList.contains("red")) {
+                body.classList.remove("red");
+                body.classList.add("blue");
+            }
+        })
+
+       
+        const form = document.querySelector("#numberForm");
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const inputValue = document.getElementById("newNumber").value;
+            // console.log(typeof(inputValue));
+            const number  = parseInt(inputValue);
+            console.log(number);
+            if (number === 5) {
+                console.log('Bingo!');
+            }
+        })
+
+
+        // const currentDate = new Date();
+        // // console.log(currentDate);
+
+        // if ( currentDate.getHours() < 18 ) {
+        //     // execute this code if condition is true
+        //     document.getElementById("demo").innerHTML = 'Good day!'
+        // }
+
+    </script>
+</body>
+</html>
