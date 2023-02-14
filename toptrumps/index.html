@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <link rel="stylesheet" href="/toptrumps/toptrumpscss/style.css">
+</head>
+<body>
+    <h1>GritHub</h1>
+    <div class="rocks card">
+        <h3 id="name"></h3>
+        <p id="area"></p>
+        <p id="tech-grade"></p>
+        <p id="trad-grade"></p>
+    </div>
+
+    <script>
+
+        console.log(document.querySelector('h1').style);
+
+        const rocks = { 
+            //key:value,
+            name:'Flying Buttress',
+            area:'Stanage',
+            tech-grade: 'Hard Very Difficult',
+            trad-grade: '4a',
+        }
+
+        let title = document.querySelector(".rocks #name").rocks.title;
+        let area = document.querySelector(".rocks #area").rocks.area;
+        let techGrade = document.querySelector(".rocks #techGrade").rocks.tech-grade;
+        let tradGrade = document.querySelector(".rocks #trad-grade").rocks.tradGrade;
+
+        let rocks = {
+            { 
+            name:'Flying Buttress'
+            area:'Stanage'
+            tech-grade: 'Hard Very Diffcult'
+            trad-grade: '4a'
+            }, 
+
+            {
+            name:'Stoked'
+            area:'Birchen Edge'
+            tech-grade: '4a'
+            trad-grade: 'Severe'
+            },
+        }
+    </script>
+</body>
+</html>
