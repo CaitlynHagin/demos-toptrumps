@@ -12,42 +12,59 @@
     <div class="rocks card">
         <h3 id="name"></h3>
         <p id="area"></p>
-        <p id="tech-grade"></p>
-        <p id="trad-grade"></p>
+        <p id="techGrade"></p>
+        <p id="tradGrade"></p>
     </div>
+    <div id="area"></div>
 
     <script>
-
-        console.log(document.querySelector('h1').style);
-
-        const rocks = { 
+        let rocks = 
             //key:value,
+            {
             name:'Flying Buttress',
             area:'Stanage',
-            tech-grade: 'Hard Very Difficult',
-            trad-grade: '4a',
+            techGrade: 'Hard Very Difficult',
+            tradGrade: '4a',
         }
+    
 
-        let title = document.querySelector(".rocks #name").rocks.title;
-        let area = document.querySelector(".rocks #area").rocks.area;
-        let techGrade = document.querySelector(".rocks #techGrade").rocks.tech-grade;
-        let tradGrade = document.querySelector(".rocks #trad-grade").rocks.tradGrade;
+        let title = document.querySelector("#name")
+        title.innerHTML=rocks.name
 
-        let rocks = {
-            { 
-            name:'Flying Buttress'
-            area:'Stanage'
-            tech-grade: 'Hard Very Diffcult'
-            trad-grade: '4a'
-            }, 
+        let area = document.querySelector("#area")
+        area.innerHTML=rocks.area
 
+        let techGrades = document.querySelector("#techGrade")
+        techGrades.innerHTML=rocks.techGrade
+
+        let tradGrades = document.querySelector("#tradGrade")
+        tradGrades.innerHTML=rocks.tradGrade
+        
+        let rocks1 = [
+    
             {
-            name:'Stoked'
-            area:'Birchen Edge'
-            tech-grade: '4a'
-            trad-grade: 'Severe'
-            },
-        }
+            name:'Stoked',
+            area:'Birchen Edge',
+            techGrade: '4a',
+            tradGrade: 'Severe'
+            }
+        ]
+
+        const map1 = rocks1.map((rock)=>{
+            
+        let areaToFill = document.getElementById('area')
+
+        let list =  document.createElement('li')
+        list.innerHTML = ` this is my sentence ${rock.name}`
+
+        areaToFill.append(list)
+            
+        console.log(rock)
+        })
+        
+
+        
+        
     </script>
 </body>
 </html>
