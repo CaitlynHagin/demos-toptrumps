@@ -55,7 +55,7 @@
         let areaToFill = document.getElementById('area')
 
         let list =  document.createElement('li')
-        list.innerHTML = ` this is my sentence ${rock.name}`
+        // list.innerHTML = ` this is my sentence ${rock.name}`
 
         areaToFill.append(list)
             
@@ -63,6 +63,50 @@
         })
         
 
+        //copied from Oli 
+
+        const articles = [
+            {
+                title: "my article title", 
+                author: 'Joe Bloggs', 
+                date: '12-02-2023'
+            },
+            {
+                title: 'Another title for an article', 
+                author: 'Bill Jones', 
+                date: '24-02-2024'
+            },
+            {
+                title: 'Third one', 
+                author: 'John Smith', 
+                date: '24-02-2024'
+            },
+        ]
+
+        articles.map(function(currentItem){
+            const div = document.createElement('div');
+            div.innerHTML = `
+            <p id="article">
+                <span>Title:</span>
+                <span>${currentItem.title}</span>
+            </p>
+            `;
+            document.getElementById("demo").appendChild(div);
+        })
+
+
+
+        let title = document.querySelector("#name")
+        title.innerHTML=rocks1.name
+
+        let area = document.querySelector("#area")
+        area.innerHTML=rocks1.area
+
+        let techGrades = document.querySelector("#techGrade")
+        techGrades.innerHTML=rocks1.techGrade
+
+        let tradGrades = document.querySelector("#tradGrade")
+        tradGrades.innerHTML=rocks1.tradGrade
         
         
     </script>
